@@ -783,6 +783,7 @@ input, select, textarea {
 		list-style: none;
 		margin-left: -1rem;
 		padding-left: 0;
+		justify-content: space-evenly;
 	}
 
 		ul.actions li {
@@ -1709,4 +1710,15 @@ input, select, textarea {
 		#intro {
 			width: 40vw;
 			text-wrap: wrap;
+		}
+
+		.contact-info {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.contact-info a {
+			color: white;
+			text-decoration: none;
+			border-bottom: none;
 		}
