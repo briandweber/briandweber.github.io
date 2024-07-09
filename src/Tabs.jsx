@@ -39,14 +39,14 @@ export default function VerticalTabs() {
     <ThemeProvider theme={theme}>
       <Tabs
         borderColor='primary'
-        textColor='secondary'
+        textColor='background'
         indicatorColor='primary'
         orientation="vertical"
         variant="scrollable"
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs"
-        sx={{ borderRight: 1, borderColor: 'divider', alignItems: 'center' }}
+        sx={{ borderRight: 1, borderColor: 'divider', alignItems: 'center', color: 'white' }}
         >
         <Tab sx={{ width: 300 }} label="About" {...a11yProps(0)} />
         <Tab label="Experience" {...a11yProps(1)} />
@@ -55,7 +55,6 @@ export default function VerticalTabs() {
         <Tab label="Comment" {...a11yProps(4)} />
       </Tabs>
     </ThemeProvider>
-
   );
 }
 

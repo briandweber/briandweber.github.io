@@ -166,7 +166,6 @@ body {
       top: 100%;
       bottom: 100%;
       flex: 1;
-
     }
     .page-content {
       display: flex;
@@ -176,13 +175,26 @@ body {
       width: 50vw;
       flex: 1;
       overflow: auto;
-
     }
   }
+
+.page-content img {
+  width: 80%;
+  opacity: 1;
+  backface-visibility: hidden;
+  transition: .4s ease;
+}
+
+.page-content img:hover {
+  opacity: 0.3;
+}
+
+.page-content
 
 .about {
   text-align: left;
   height: 5%;
+  width: 90%;
   margin-top: 20%;
 }
 
@@ -193,7 +205,8 @@ body {
 .follow-links {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin: 30px;
 }
 
 .follow-links .fa-linkedin {

@@ -8,6 +8,7 @@ export default function PageContent() {
     return (
         <>
         <div className="scroll-container">
+                <div className="content-items">
                 <section id="About" className="about">
                         <Greeting />
                 </section>
@@ -24,6 +25,7 @@ export default function PageContent() {
                         <img src={gamester2} alt="gamester image" />
                         <img src={gamester3} alt="gamester image" />
                 </section>
+                </div>
         </div>
         </>
   );
