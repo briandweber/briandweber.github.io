@@ -1,5 +1,7 @@
 import GitLinks from "./GitLinks";
 import FollowLinks from "./FollowLinks";
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
 export default function Nav() {
     return (
@@ -12,7 +14,7 @@ export default function Nav() {
         <div className="nav-heading">
 
           <div className="nav-about">
-            <a href="#About">About</a>
+            <a href="#About">About1</a>
           </div>
           <div>
             <a href="#Experience">Experience</a>
@@ -26,6 +28,7 @@ export default function Nav() {
 
         </div>
         <FollowLinks />
+
 
     </>
 
