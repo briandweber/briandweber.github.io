@@ -1,5 +1,4 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -18,6 +17,7 @@ const theme = createTheme({
   },
   typography: {
     fontSize: 20,
+    fontFamily: 'Raleway',
   }
 });
 
@@ -38,7 +38,7 @@ export default function VerticalTabs() {
   return (
     <ThemeProvider theme={theme}>
       <Tabs
-        borderColor='primary'
+        // borderColor='primary'
         textColor='background'
         indicatorColor='primary'
         orientation="vertical"
@@ -51,8 +51,6 @@ export default function VerticalTabs() {
         <Tab sx={{ width: 300 }} label="About" {...a11yProps(0)} />
         <Tab label="Experience" {...a11yProps(1)} />
         <Tab label="Projects" {...a11yProps(2)} />
-        <Tab label="Resume" {...a11yProps(3)} />
-        <Tab label="Comment" {...a11yProps(4)} />
       </Tabs>
     </ThemeProvider>
   );

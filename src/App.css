@@ -4,6 +4,7 @@
 
 body {
   background-color: #0e1935;
+  overflow: hidden;
 }
 
 #root {
@@ -15,6 +16,7 @@ body {
 .nav-title {
   margin-top: 20%;
   text-align: center;
+  z-index: 1;
 }
 
 .nav-heading {
@@ -24,7 +26,7 @@ body {
 .git-links {
   position: fixed;
   top: 30vh;
-  z-index: 1001;
+  z-index: 2;
   left: 0;
   display: block;
   list-style: none;
@@ -174,7 +176,7 @@ body {
       justify-content: space-between;
       width: 50vw;
       flex: 1;
-      overflow: auto;
+      overflow: hidden;
     }
   }
 
@@ -255,4 +257,18 @@ body {
 
 * {
   scroll-behavior: smooth;
+}
+
+.card-container {
+  box-shadow: ;
+
+}
+
+.app-container {
+  max-width: 1280px;
+}
+
+.top-nav {
+  background-color: white;
+  font: black;
 }
