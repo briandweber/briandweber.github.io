@@ -2,71 +2,61 @@
 @import '@fontsource/roboto/300.css';
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #0e1935;
   overflow: hidden;
 }
 
 #root {
-  max-width: 1280px;
+  width: 100vw;
   margin: 0 auto;
   text-align: center;
-}
-
-.nav-title {
-  margin-top: 20%;
-  text-align: center;
-  z-index: 1;
+  height: 100vh;
 }
 
 .nav-heading {
   margin: 3rem;
 }
 
-.git-links {
-  position: fixed;
-  top: 30vh;
-  z-index: 2;
-  left: 0;
-  display: block;
-  list-style: none;
-}
+@media (min-width: 1024px) {
 
-.git-links ul {
-  display: block;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+  .git-mobile {
+    display: none;
+  }
 
-.git-links li {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
+  .git-desktop {
+    position: fixed;
+    top: 30vh;
+    z-index: 2;
+    left: 0;
+    display: block;
+  }
 
-.git-links .fa-github {
-  background: #4E545A;
-}
+  .git-desktop ul {
+    list-style: none;
+    padding-left: 0;
+  }
 
-.git-links .fa-gitlab {
-  background: #E3462D;
-}
+  .git-desktop .fa-github {
+    background: #4E545A;
+  }
 
-.git-links a {
-  display: block;
-  width: 55px;
-  height: 55px;
-  line-height: 55px;
-  text-align: center;
-  margin: 0 auto;
-  transition: all 0.3s;
-  margin: 0 auto;
-  padding: 0;
-}
+  .git-desktop .fa-gitlab {
+    background: #E3462D;
+  }
 
-/* Icon */
+  .git-desktop a {
+    display: block;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    transition: all 0.3s;
+  }
+}
 
 .icon {
   text-decoration: none;
@@ -151,53 +141,34 @@ body {
     background-color: rgba(255, 255, 255, 0.175);
   }
 
-  @media (min-width: 1024px) {
-    .container {
-      display: flex;
-      justify-content: space-between;
-      margin: 0 auto;
-      overflow: hidden;
-      height: 100vh;
-      bottom: 0;
-    }
-    .nav {
-      overflow: hidden;
-      height: 100vh;
-      width: 50vw;
-      position: sticky;
-      top: 100%;
-      bottom: 100%;
-      flex: 1;
-    }
-    .page-content {
-      display: flex;
-      height: 100vh;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 50vw;
-      flex: 1;
-      overflow: hidden;
-    }
+  .page-content {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50vw;
+    flex: 1;
+    overflow: hidden;
   }
 
+
 .page-content img {
-  width: 80%;
-  opacity: 1;
-  backface-visibility: hidden;
-  transition: .4s ease;
+  width: 150%;
 }
 
-.page-content img:hover {
-  opacity: 0.3;
+.content-items {
+  margin-top: 20%;
 }
-
-.page-content
-
 .about {
+  margin-top: 20%;
   text-align: left;
   height: 5%;
   width: 90%;
-  margin-top: 20%;
+  margin: 30px;
+}
+
+.projects {
+  margin: 30px;
 }
 
 .nav-heading div {
@@ -205,7 +176,6 @@ body {
 }
 
 .follow-links {
-  height: 100vh;
   display: flex;
   justify-content: space-evenly;
   margin: 30px;
@@ -255,13 +225,18 @@ body {
   padding-left: 0;
 }
 
-* {
-  scroll-behavior: smooth;
+.card-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 50% 50%;
+  padding: 5px;
+  background-color: #4E545A;
+  border-radius: 5px;
+  transition: .2s ease-in-out;
 }
 
-.card-container {
-  box-shadow: ;
-
+.card-container:hover {
+  opacity: 0.3;
 }
 
 .app-container {
@@ -271,4 +246,72 @@ body {
 .top-nav {
   background-color: white;
   font: black;
+}
+
+.card-logo {
+  height: 70%;
+  width: 50%;
+}
+
+.search-app-bar {
+  width: 100vw;
+  position: fixed;
+  background-color: rgb(211, 37, 37);
+  text-align: center;
+  top: 0;
+}
+
+.logo-div img {
+  max-width: 50px;
+}
+
+@media (max-width: 1023px) {
+    .search {
+    display: none;
+  }
+    .git-desktop {
+      display: none;
+    }
+
+    .git-mobile {
+      position: static;
+      top: 30vh;
+      z-index: 2;
+      left: 0;
+      display: block;
+    }
+
+    .git-mobile .fa-github {
+      background: #4E545A;
+    }
+
+    .git-mobile .fa-gitlab {
+      background: #E3462D;
+    }
+
+    .git-mobile a {
+      display: inline-block;
+      width: 55px;
+      height: 55px;
+      line-height: 55px;
+      transition: all 0.3s;
+    }
+
+    .git-mobile li {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    .git-mobile ul {
+      display: inline-block;
+      list-style: none;
+      padding: 0;
+      height: 100%;
+    }
+  }
+
+.search {
+  box-shadow: 0px 3px #000000;
+  top: 0;
 }

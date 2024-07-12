@@ -1,17 +1,23 @@
 import GitLinks from "./GitLinks";
 import FollowLinks from "./FollowLinks";
 import Tabs from "./Tabs.jsx";
-
+import Resume from './assets/Resume.pdf';
 export default function Nav() {
     return (
     <>
-        <GitLinks />
         <div className="nav-title">
           <h1>Brian D Weber</h1>
           <h2>Full Stack Software Engineer</h2>
+          Résumé - <a target="_blank" href={Resume}>View</a> | <a href={Resume} download={Resume}>Download</a>
         </div>
         <Tabs />
         <FollowLinks />
+        <div className="git-desktop">
+          <GitLinks />
+        </div>
+        <div className="git-mobile">
+          <GitLinks />
+        </div>
     </>
 
   );

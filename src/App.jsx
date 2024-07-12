@@ -2,12 +2,12 @@ import './App.css'
 import Nav from './Nav'
 import PageContent from './PageContent'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import AppBar from './AppBar';
+import SearchAppBar from './SearchAppBar';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#FF5F1F',
+      main: '#4E545A',
     },
     secondary: {
       main: '#5D65D2',
@@ -27,19 +27,13 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <div>
-      <AppBar color='black' />
-        </div>
-      <div className='container'>
-        <div className='nav'>
-          <Nav />
-        </div>
-        <div className='page-content'>
-          <PageContent />
-        </div>
+    <ThemeProvider theme={theme}>
+      <div className='search'>
+        <SearchAppBar />
       </div>
-      </ThemeProvider>
+      <Nav />
+      {/* <PageContent /> */}
+    </ThemeProvider>
     </>
   )
 }
