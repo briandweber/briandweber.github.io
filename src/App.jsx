@@ -33,7 +33,6 @@ function App() {
       </div>
       <div className='navigation'>
         <Nav />
-
       </div>
       <div className='page-content'>
         <PageContent />

@@ -6,16 +6,13 @@ export default function PageContent() {
     return (
         <>
                 <div className="content-items">
-                <section id="About" className="about">
-                        <Greeting />
-                </section>
-                <section id="Projects" className="projects">
-                        <h3>PROJECTS</h3>
-                        <Projects />
-                </section>
-                <section>
-                        <h3>RESUME</h3>
-                </section>
+                        <section id="About" className="about">
+                                <Greeting />
+                        </section>
+                        <div id="Projects" className="projects">
+                                <h3>PROJECTS</h3>
+                                <Projects />
+                        </div>
                 </div>
         </>
   );
