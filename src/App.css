@@ -24,6 +24,40 @@ body {
 
 @media (min-width: 1024px) {
 
+  .navigation {
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    z-index: 101;
+  }
+
+  .page-content {
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    width: 50vw;
+    height: 100vh;
+    margin-right: 5%;
+    top: 0;
+  }
+
+  .contact-wrapper {
+    margin-right: 5rem;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    margin-right: 10%;
+    right: 0;
+  }
+
+  .contact {
+    padding-right: 30px;
+  }
+
+  .comment {
+    padding-left: 30px;
+  }
+
   .git-mobile {
     display: none;
   }
@@ -42,7 +76,7 @@ body {
   }
 
   .git-desktop .fa-github {
-    background: #4E545A;
+    background: #393A3A;
   }
 
   .git-desktop .fa-gitlab {
@@ -262,7 +296,7 @@ body {
 }
 
 .logo-div img {
-  max-width: 50px;
+  max-width: 90px;
 }
 
 @media (max-width: 1023px) {
@@ -282,7 +316,7 @@ body {
     }
 
     .git-mobile .fa-github {
-      background: #4E545A;
+      background: #393A3A;
     }
 
     .git-mobile .fa-gitlab {
@@ -314,4 +348,6 @@ body {
 .search {
   box-shadow: 0px 3px #000000;
   top: 0;
+  display: flex;
+  justify-content: space-around;
 }

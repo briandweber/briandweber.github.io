@@ -7,7 +7,7 @@ import SearchAppBar from './SearchAppBar';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#4E545A',
+      main: '#393A3A',
     },
     secondary: {
       main: '#5D65D2',
@@ -31,8 +31,13 @@ function App() {
       <div className='search'>
         <SearchAppBar />
       </div>
-      <Nav />
-      {/* <PageContent /> */}
+      <div className='navigation'>
+        <Nav />
+
+      </div>
+      <div className='page-content'>
+        <PageContent />
+      </div>
     </ThemeProvider>
     </>
   )

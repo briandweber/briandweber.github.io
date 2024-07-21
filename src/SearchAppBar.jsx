@@ -156,7 +156,7 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1}}>
       <AppBar position="static">
         <Toolbar>
           <div className='logo-div'>
@@ -171,14 +171,28 @@ export default function PrimarySearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
               />
           </Search>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: 'none', sm: 'block' } }}
-            >
-            MUI
-          </Typography>
+          <div className='contact-wrapper'>
+            <div className='contact'>
+              <Typography
+                variant="h6"
+                noWrap
+                component="div"
+                sx={{ display: { xs: 'none', sm: 'block' } }}
+                >
+                CONTACT
+              </Typography>
+            </div>
+            <div className='comment'>
+              <Typography
+                variant="h6"
+                noWrap
+                component="div"
+                sx={{ display: { xs: 'none', sm: 'block' } }}
+                >
+                COMMENT
+              </Typography>
+            </div>
+          </div>
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
