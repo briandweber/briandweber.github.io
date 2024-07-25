@@ -1,45 +1,39 @@
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
-import Nav from './Nav'
-import PageContent from './PageContent'
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SearchAppBar from './SearchAppBar';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#393A3A',
-    },
-    secondary: {
-      main: '#5D65D2',
-    },
-    background: {
-      main: '##0D1935',
-    }
-  },
-  typography: {
-    fontSize: 20,
-    fontFamily: 'Raleway',
-  }
-});
-
+import Home from './Home';
+import Comment from './Comment';
+import ContactForm from './ContactForm';
 
 function App() {
-
   return (
     <>
-    <ThemeProvider theme={theme}>
-      <div className='search'>
+    <BrowserRouter>
         <SearchAppBar />
-      </div>
-      <div className='navigation'>
-        <Nav />
-      </div>
-      <div className='page-content'>
-        <PageContent />
-      </div>
-    </ThemeProvider>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="comment" element={<Comment />} />
+          <Route path="contact" element={<ContactForm />} />
+        </Routes>
+    </BrowserRouter>
     </>
   )
 }
 
 export default App
+
+
+
+// <Routes>
+//           <Route path="/" element={<MainPage />} />
+//           <Route path="salespeople">
+//             <Route path="" element={<SalespeopleList />} />
+//             <Route path="new" element={<SalespeopleForm />} />
+//           </Route>
+//           <Route path="customers">
+//             <Route path="" element={<CustomersList />} />
+//             <Route path="new" element={<CustomerForm />} />
+//           </Route>
+//           <Route path="sales">
+//             <Route path="" element={<SalesList />} />
+//             <Route path="new" element={<SaleForm />} />

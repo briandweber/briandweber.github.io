@@ -2,6 +2,7 @@ import GitLinks from "./GitLinks";
 import FollowLinks from "./FollowLinks";
 import Tabs from "./Tabs.jsx";
 import Resume from './assets/Resume.pdf';
+
 export default function Nav() {
     return (
     <>

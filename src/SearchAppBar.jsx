@@ -9,13 +9,31 @@ import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
 import bdwLogo from './assets/images/bdwLogo.jpeg';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { NavLink } from 'react-router-dom';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#393A3A',
+    },
+    secondary: {
+      main: '#5D65D2',
+    },
+    background: {
+      main: '##0D1935',
+    }
+  },
+  typography: {
+    fontSize: 20,
+    fontFamily: 'Raleway',
+  }
+});
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -156,47 +174,49 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1}}>
-      <AppBar position="static">
-        <Toolbar>
-          <div className='logo-div'>
-            <img src={bdwLogo} alt="BDW Logo" />
-          </div>
-          <Search sx={{ width: '50%' }}>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search Projects…"
-              inputProps={{ 'aria-label': 'search' }}
-              />
-          </Search>
-          <div className='contact-wrapper'>
-            <div className='contact'>
-              <Typography
-                variant="h6"
-                noWrap
-                component="div"
-                sx={{ display: { xs: 'none', sm: 'block' } }}
-                >
-                CONTACT
-              </Typography>
+    <ThemeProvider theme={theme}>
+      <Box sx={{ flexGrow: 1}}>
+        <AppBar position="static">
+          <Toolbar>
+            <div className='logo-div'>
+              <NavLink to="/"><img src={bdwLogo} alt="BDW Logo" /></NavLink>
             </div>
-            <div className='comment'>
-              <Typography
-                variant="h6"
-                noWrap
-                component="div"
-                sx={{ display: { xs: 'none', sm: 'block' } }}
-                >
-                COMMENT
-              </Typography>
-            </div>
-          </div>
-        </Toolbar>
-      </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
-    </Box>
+            <Search sx={{ width: '50%' }}>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search Projects…"
+                inputProps={{ 'aria-label': 'search' }}
+                />
+            </Search>
+            {/* <div className='contact-wrapper'> */}
+              <div className='contact'>
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="div"
+                  sx={{ display: { xs: 'none', sm: 'block' } }}
+                  ><NavLink to="/contact">CONTACT</NavLink></Typography>
+              </div>
+              <div className='comment'>
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="div"
+                  sx={{ display: { xs: 'none', sm: 'block' } }}
+                  ><NavLink to="/comment">COMMENT</NavLink>
+                </Typography>
+              </div>
+            {/* </div> */}
+          </Toolbar>
+        </AppBar>
+        {renderMobileMenu}
+        {renderMenu}
+      </Box>
+    </ThemeProvider>
   );
 }
+
+
+{/* <NavLink className="navbar-brand" to="/salespeople">Salespeople</NavLink> */}
