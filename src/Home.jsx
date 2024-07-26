@@ -5,12 +5,14 @@ import PrimarySearchAppBar from "./SearchAppBar"
 function Home() {
     return (
         <>
-            {/* <PrimarySearchAppBar /> */}
+            <div className="home-wrapper">
+                <PrimarySearchAppBar />
             <div className="navigation">
                 <Nav />
             </div>
             <div className="page-content">
                 <PageContent />
+            </div>
             </div>
         </>
     )

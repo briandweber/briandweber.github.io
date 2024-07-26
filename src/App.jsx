@@ -10,7 +10,7 @@ function App() {
     <>
     <BrowserRouter>
       <div className='app-container'>
-          <SearchAppBar />
+          {/* <SearchAppBar /> */}
           <div className='nav-page'>
             <Routes>
               <Route exact path="/" element={<Home />} />

@@ -45,6 +45,7 @@ body {
     width: 50vw;
     height: 100vh;
     top: 0;
+    position: absolute;
   }
 
   .contact {
@@ -185,6 +186,8 @@ body {
     height: 100vh;
     width: 50vw;
     overflow: hidden;
+    position: absolute;
+    top: 100px;
   }
 
 
@@ -283,6 +286,22 @@ body {
 .top-nav {
   background-color: white;
   font: black;
+}
+
+.home-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.contact-button {
+  padding: auto;
+}
+
+.form-background {
+  background-color: #697075;
+  color: #ffffff;
+  border-radius: 5px;
 }
 
 .app-container {
