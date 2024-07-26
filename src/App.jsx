@@ -9,31 +9,19 @@ function App() {
   return (
     <>
     <BrowserRouter>
-        <SearchAppBar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="comment" element={<Comment />} />
-          <Route path="contact" element={<ContactForm />} />
-        </Routes>
+      <div className='app-container'>
+          <SearchAppBar />
+          <div className='nav-page'>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="comment" element={<Comment />} />
+              <Route path="contact" element={<ContactForm />} />
+            </Routes>
+          </div>
+      </div>
     </BrowserRouter>
     </>
   )
 }
 
 export default App
-
-
-
-// <Routes>
-//           <Route path="/" element={<MainPage />} />
-//           <Route path="salespeople">
-//             <Route path="" element={<SalespeopleList />} />
-//             <Route path="new" element={<SalespeopleForm />} />
-//           </Route>
-//           <Route path="customers">
-//             <Route path="" element={<CustomersList />} />
-//             <Route path="new" element={<CustomerForm />} />
-//           </Route>
-//           <Route path="sales">
-//             <Route path="" element={<SalesList />} />
-//             <Route path="new" element={<SaleForm />} />

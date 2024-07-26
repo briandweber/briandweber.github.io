@@ -178,6 +178,7 @@ export default function PrimarySearchAppBar() {
       <Box sx={{ flexGrow: 1}}>
         <AppBar position="static">
           <Toolbar>
+            {/* <div className='logo-search'> */}
             <div className='logo-div'>
               <NavLink to="/"><img src={bdwLogo} alt="BDW Logo" /></NavLink>
             </div>
@@ -190,6 +191,7 @@ export default function PrimarySearchAppBar() {
                 inputProps={{ 'aria-label': 'search' }}
                 />
             </Search>
+            {/* </div> */}
             {/* <div className='contact-wrapper'> */}
               <div className='contact'>
                 <Typography
@@ -205,10 +207,9 @@ export default function PrimarySearchAppBar() {
                   noWrap
                   component="div"
                   sx={{ display: { xs: 'none', sm: 'block' } }}
-                  ><NavLink to="/comment">COMMENT</NavLink>
-                </Typography>
-              </div>
-            {/* </div> */}
+                  ><NavLink to="/comment">COMMENT</NavLink></Typography>
+              {/* </div> */}
+            </div>
           </Toolbar>
         </AppBar>
         {renderMobileMenu}
@@ -217,6 +218,3 @@ export default function PrimarySearchAppBar() {
     </ThemeProvider>
   );
 }
-
-
-{/* <NavLink className="navbar-brand" to="/salespeople">Salespeople</NavLink> */}
