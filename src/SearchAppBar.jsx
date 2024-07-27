@@ -17,6 +17,7 @@ import bdwLogo from './assets/images/bdwLogo.jpeg';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { NavLink } from 'react-router-dom';
 
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -65,7 +66,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
@@ -178,7 +178,6 @@ export default function PrimarySearchAppBar() {
       <Box sx={{ flexGrow: 1}}>
         <AppBar position="static">
           <Toolbar>
-            {/* <div className='logo-search'> */}
             <div className='logo-div'>
               <NavLink to="/"><img src={bdwLogo} alt="BDW Logo" /></NavLink>
             </div>
@@ -191,8 +190,6 @@ export default function PrimarySearchAppBar() {
                 inputProps={{ 'aria-label': 'search' }}
                 />
             </Search>
-            {/* </div> */}
-            {/* <div className='contact-wrapper'> */}
               <div className='contact'>
                 <Typography
                   variant="h6"
@@ -208,7 +205,6 @@ export default function PrimarySearchAppBar() {
                   component="div"
                   sx={{ display: { xs: 'none', sm: 'block' } }}
                   ><NavLink to="/comment">COMMENT</NavLink></Typography>
-              {/* </div> */}
             </div>
           </Toolbar>
         </AppBar>

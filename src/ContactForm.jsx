@@ -58,58 +58,39 @@ function ContactForm() {
 
     return (
       <div className='home-wrapper'>
-      <PrimarySearchAppBar />
-          <Box
-      component="form"
-      sx={{
-        '& > :not(style)': { m: 1, width: '50ch', ml: 'auto', mr: 'auto' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <ThemeProvider theme={theme}>
-    <form onSubmit={handleSubmit}>
-      {/* <div>
-        <label>Your Name:</label>
-        <input type="text" name="name" value={formData.name} onChange={handleFormChange} required />
-      </div> */}
-      <div className='contact-input'>
-        <TextField fullWidth id="outlined-basic" name="name" label="Your Name" margin="normal" variant="outlined" className='form-background'/>
-      </div>
-      <div className='contact-input'>
-        <TextField fullWidth id="outlined-basic" name="email" type="email" label="Your Email" margin="normal" value={formData.email} onChange={handleFormChange} variant="outlined" className='form-background'/>
-      </div>
-      <div className='contact-input'>
-        <TextField fullWidth id="outlined-basic" name="subject" margin="normal" value={formData.subject} onChange={handleFormChange} label="Subject" variant="outlined" className='form-background'/>
-      </div>
-      <div className='contact-input'>
-        <TextField fullWidth id="outlined-multiline-static" multiline rows={8} name="message" margin="normal" value={formData.message} onChange={handleFormChange}label="Message" variant="outlined" className='form-background'/>
-      </div>
-      {/* <div>
-        <label>Your Email:</label>
-        <input type="email" name="email" value={formData.email} onChange={handleFormChange} required />
-      </div>
-      <div>
-        <label>Subject:</label>
-        <textarea name="subject" value={formData.subject} onChange={handleFormChange} required></textarea>
-      </div>
-      <div>
-        <label>Message:</label>
-        <textarea name="message" value={formData.message} onChange={handleFormChange} required></textarea>
-      </div> */}
-      <div className='contact-button'>
-          <Stack spacing={2} direction="row">
-            <Button color="primary" style={{margin: 'auto'}} endIcon={<SendIcon />} size="large" variant="outlined">Submit</Button>
-          </Stack>
-      </div>
-    </form>
-        </ThemeProvider>
-    {/* </div> */}
-      </Box>
+        <PrimarySearchAppBar />
+        <Box
+          component="form"
+          sx={{
+            '& > :not(style)': { m: 1, width: '50ch', ml: 'auto', mr: 'auto' },
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <ThemeProvider theme={theme}>
+            <form onSubmit={handleSubmit}>
+              <div className='contact-input'>
+                <TextField fullWidth id="outlined-basic" name="name" label="Your Name" margin="normal" variant="outlined" className='form-background'/>
+              </div>
+              <div className='contact-input'>
+                <TextField fullWidth id="outlined-basic" name="email" type="email" label="Your Email" margin="normal" value={formData.email} onChange={handleFormChange} variant="outlined" className='form-background'/>
+              </div>
+              <div className='contact-input'>
+                <TextField fullWidth id="outlined-basic" name="subject" margin="normal" value={formData.subject} onChange={handleFormChange} label="Subject" variant="outlined" className='form-background'/>
+              </div>
+              <div className='contact-input'>
+                <TextField fullWidth id="outlined-multiline-static" multiline rows={8} name="message" margin="normal" value={formData.message} onChange={handleFormChange}label="Message" variant="outlined" className='form-background'/>
+              </div>
+              <div className='contact-button'>
+                  <Stack spacing={2} direction="row">
+                    <Button color="primary" style={{margin: 'auto'}} endIcon={<SendIcon />} size="large" variant="outlined">Submit</Button>
+                  </Stack>
+              </div>
+            </form>
+          </ThemeProvider>
+        </Box>
       </div>
     )
 }
 
 export default ContactForm
-
-{/* <TextField id="filled-basic" label="Filled" variant="filled" /> */}

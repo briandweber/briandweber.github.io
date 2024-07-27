@@ -4,6 +4,7 @@
 
 * {
   scroll-behavior: smooth;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 body {
@@ -50,7 +51,7 @@ body {
 
   .contact {
     position: absolute;
-    right: 20%;
+    right: 35%;
     padding-right: 30px;
   }
 
@@ -62,7 +63,7 @@ body {
 
   .comment {
     position: absolute;
-    right: 10%;
+    right: 22%;
   }
 
   .git-mobile {
@@ -196,7 +197,6 @@ body {
 }
 
 .content-items {
-  margin-top: 20%;
   margin-right: 30%;
 }
 .about {
@@ -302,6 +302,11 @@ body {
   background-color: #ffffff;
   color: #ffffff;
   border-radius: 5px;
+}
+
+.giscus {
+  width: 40vw;
+  margin: auto;
 }
 
 .app-container {
