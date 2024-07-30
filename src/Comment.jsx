@@ -1,6 +1,8 @@
-import { useState } from 'react';
 import PrimarySearchAppBar from './SearchAppBar';
 import Giscus from '@giscus/react';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import {  NavLink } from 'react-router-dom';
 
 function Comment() {
 
@@ -24,6 +26,11 @@ function Comment() {
                 loading="lazy"
                 />
                 </div>
+                              <div style={{margin: '20px'}}>
+                  <Stack spacing={2} direction="row">
+                    <Button color="primary" style={{margin: 'auto'}} size="large" variant="outlined"><NavLink to="/">Home</NavLink></Button>
+                  </Stack>
+              </div>
         </div>
     )
 }

@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import {  NavLink } from 'react-router-dom';
 import SendIcon from '@mui/icons-material/Send';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -84,6 +85,11 @@ function ContactForm() {
               <div className='contact-button'>
                   <Stack spacing={2} direction="row">
                     <Button color="primary" style={{margin: 'auto'}} endIcon={<SendIcon />} size="large" variant="outlined">Submit</Button>
+                  </Stack>
+              </div>
+              <div style={{margin: '20px'}}>
+                  <Stack spacing={2} direction="row">
+                    <Button color="primary" style={{margin: 'auto'}} size="large" variant="outlined"><NavLink to="/">Home</NavLink></Button>
                   </Stack>
               </div>
             </form>

@@ -1,29 +1,23 @@
 import gamesterDesktop from './assets/images/gamesterDesktop.png';
+import gamesterAppImage from './assets/images/gamesterAppImage.png';
+import CarCarLogo from './assets/images/CarCarLogo.png';
+import CarCarAppImage from './assets/images/CarCarAppImage.png';
 
 export default function Projects () {
     return (
-        <div className="card-container">
-
-            <img src={gamesterDesktop} alt="Gamester Logo" />
-            {/* <div className="card-logo">
-                <img src={gamesterDesktop}/>
+        <>
+            <div className="card-container">
+                <a href="https://gitlab.com/briandweber/module3-project-gamma" target="_blank">
+                    <img src={gamesterDesktop} className="background-image" alt="Gamester Logo" />
+                    <img src={gamesterAppImage} className="overlay" alt="Gamester Logo" />
+                </a>
             </div>
-            <div className="card-description">
-                <p>From setting up tournaments to managing registrations, Gamester provides tournament managers with the tools and support needed to navigate the complexities of event coordination with ease. </p>
+            <div className="card-container">
+                <a href="https://gitlab.com/briandweber/project-beta" target="_blank">
+                    <img src={CarCarLogo} className="background-image" alt="CarCar Logo" />
+                    <img src={CarCarAppImage} className="overlay" alt="CarCar Logo" />
+                </a>
             </div>
-            <div className="time">
-                April/2024 - May/2024
-            </div>
-            <div className="tech-tags">
-                {/* <button>Python</button>
-                <button>Javascript</button>
-                <button>FastAPI</button>
-                <button>React</button>
-                <button>Docker</button>
-                <button>PostgreSQL</button> */}
-                                {/* <p>From setting up tournaments to managing registrations, Gamester provides tournament managers with the tools and support needed to navigate the complexities of event coordination with ease. </p> */}
-{/*
-            </div> */} */}
-        </div>
+        </>
     )
 }

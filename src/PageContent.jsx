@@ -9,10 +9,8 @@ export default function PageContent() {
                         <Greeting />
                 </section>
                 <section id="Projects" className="projects">
-                        <div className="project-cards">
                                 <h3>PROJECTS</h3>
                                 <Projects />
-                        </div>
                 </section>
         </div>
   );
