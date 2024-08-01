@@ -69,7 +69,7 @@ function ContactForm() {
           autoComplete="off"
         >
           <ThemeProvider theme={theme}>
-            <form onSubmit={handleSubmit}>
+            <form action="contact.php" method="post" onSubmit={handleSubmit}>
               <div className='contact-input'>
                 <TextField fullWidth id="outlined-basic" name="name" label="Your Name" margin="normal" variant="outlined" className='form-background'/>
               </div>
