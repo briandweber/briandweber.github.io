@@ -9,7 +9,7 @@
 
 body {
   background-color: #0e1935;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #root {
@@ -37,7 +37,7 @@ body {
   .navigation {
     left: 0;
     width: 50vw;
-    height: 100vh;
+    /* height: 100vh; */
   }
 
   .page-content {
@@ -46,6 +46,8 @@ body {
     height: 100vh;
     top: 0;
     position: absolute;
+    overflow-y: auto;
+    overflow: hidden;
   }
 
   .contact {
@@ -185,7 +187,8 @@ ul.icons li a:active {
 .page-content {
   height: 100vh;
   width: 50vw;
-  overflow: hidden;
+  overflow-y: auto;
+  /* overflow: hidden; */
   position: absolute;
   top: 100px;
 }
@@ -193,12 +196,14 @@ ul.icons li a:active {
 .content-items {
   margin-right: 30%;
 }
+
+
 .about {
   margin-top: 20%;
+  width: 75%;
+  margin: auto;
+  font-size: 1.5em;
   text-align: left;
-  height: 5%;
-  width: 90%;
-  margin: 30px;
 }
 
 .nav-heading div {
@@ -296,6 +301,17 @@ ul.icons li a:active {
 
 .card-container:hover .background-image {
   opacity: 0;
+}
+
+.overlay-tech {
+  position: absolute;
+  top: 30%;
+  left: 17%;
+  width: 65%;
+}
+
+.overlay-tech button {
+  margin: 10px;
 }
 
 .top-nav {

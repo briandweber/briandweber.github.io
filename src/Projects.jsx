@@ -7,10 +7,20 @@ export default function Projects () {
     return (
         <>
             <div className="card-container">
-                <a href="https://gitlab.com/briandweber/module3-project-gamma" target="_blank">
-                    <img src={gamesterDesktop} className="background-image" alt="Gamester Logo" />
+                    <img src={gamesterDesktop} className="background-image" alt="Gamester Logo"/>
                     <img src={gamesterAppImage} className="overlay" alt="Gamester Logo" />
-                </a>
+                    <div className='overlay-tech'>
+                        <button>FastAPI</button>
+                        <button>React</button>
+                        <button>Python</button>
+                        <button>Javascript</button>
+                        <button>Docker</button>
+                        <button>PostgreSQL</button>
+                    </div>
+                    <div className='overlay-git'>
+                        <a href="https://gitlab.com/briandweber/module3-project-gamma" target="_blank"></a><button className='github-button'>GitLab</button>
+                        <a href="https://gitlab.com/briandweber/module3-project-gamma" target="_blank"></a><button className='gitlab-button'>GitHub</button>
+                    </div>
             </div>
             <div className="card-container">
                 <a href="https://gitlab.com/briandweber/project-beta" target="_blank">
