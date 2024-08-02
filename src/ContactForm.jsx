@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import PrimarySearchAppBar from './SearchAppBar';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -7,6 +7,8 @@ import Button from '@mui/material/Button';
 import {  NavLink } from 'react-router-dom';
 import SendIcon from '@mui/icons-material/Send';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import emailjs from '@emailjs/browser';
+
 
 const theme = createTheme({
   palette: {
@@ -17,51 +19,52 @@ const theme = createTheme({
 
 function ContactForm() {
 
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
+  const [formData, setFormData] = useState({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+  });
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        const url = 'http://localhost:8100/api/emails/';
-        const fetchConfig = {
-            method: "post",
-            body: JSON.stringify(formData),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        }
-        const response = await fetch(url, fetchConfig);
+  const form = useRef();
 
-        if (response.ok){
-            setFormData({
-                name: '',
-                email: '',
-                subject: '',
-                message: ''
-            })
-        }else {
-            console.log("error sending email");
-        }
-    }
+  const sendEmail = async (e) => {
+    e.preventDefault();
 
-    const handleFormChange = async (e) => {
-        const value = e.target.value;
-        const inputName = e.target.name;
+    emailjs
+      .sendForm('service_2hqyfag', 'template_9gmp516', form.current, {
+        publicKey: 'oMF4MNG1buyE_2Q0N',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
         setFormData({
-            ...formData,
-            [inputName]: value
-        });
-    }
+              name: '',
+              email: '',
+              subject: '',
+              message: ''
+        })
+    );
+  };
+
+  const handleFormChange = async (e) => {
+      const value = e.target.value;
+      const inputName = e.target.name;
+      setFormData({
+          ...formData,
+          [inputName]: value
+      });
+  }
 
     return (
       <div className='home-wrapper'>
         <PrimarySearchAppBar />
         <Box
-          component="form"
+          // component="form"
           sx={{
             '& > :not(style)': { m: 1, width: '50ch', ml: 'auto', mr: 'auto' },
           }}
@@ -69,9 +72,9 @@ function ContactForm() {
           autoComplete="off"
         >
           <ThemeProvider theme={theme}>
-            <form action="contact.php" method="post" onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={sendEmail}>
               <div className='contact-input'>
-                <TextField fullWidth id="outlined-basic" name="name" label="Your Name" margin="normal" variant="outlined" className='form-background'/>
+                <TextField fullWidth id="outlined-basic" name="name" value={formData.name} onChange={handleFormChange} label="Your Name" margin="normal" variant="outlined" className='form-background'/>
               </div>
               <div className='contact-input'>
                 <TextField fullWidth id="outlined-basic" name="email" type="email" label="Your Email" margin="normal" value={formData.email} onChange={handleFormChange} variant="outlined" className='form-background'/>
@@ -84,7 +87,7 @@ function ContactForm() {
               </div>
               <div className='contact-button'>
                   <Stack spacing={2} direction="row">
-                    <Button color="primary" style={{margin: 'auto'}} endIcon={<SendIcon />} size="large" variant="outlined">Submit</Button>
+                    <Button color="primary" type="submit" value="Send" style={{margin: 'auto'}} endIcon={<SendIcon />} size="large" variant="outlined">Submit</Button>
                   </Stack>
               </div>
               <div style={{margin: '20px'}}>
