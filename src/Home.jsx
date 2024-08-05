@@ -10,7 +10,9 @@ function Home() {
     return (
         <>
             <div className="home-wrapper">
-                <PrimarySearchAppBar />
+                <div className="primary-search-app-bar">
+                    <PrimarySearchAppBar />
+                </div>
                 <div className="navigation">
                     <Nav />
                 </div>
