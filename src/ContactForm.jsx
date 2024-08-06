@@ -8,6 +8,8 @@ import {  NavLink } from 'react-router-dom';
 import SendIcon from '@mui/icons-material/Send';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import emailjs from '@emailjs/browser';
+import MobileNav from "./MobileNav"
+
 
 
 const theme = createTheme({
@@ -62,11 +64,15 @@ function ContactForm() {
 
     return (
       <div className='home-wrapper'>
-        <PrimarySearchAppBar />
+        <div className='primary-search-app-bar'>
+          <PrimarySearchAppBar />
+        </div>
+                        <div className="mobile-nav">
+                    <MobileNav />
+                </div>
         <Box
-          // component="form"
           sx={{
-            '& > :not(style)': { m: 1, width: '50ch', ml: 'auto', mr: 'auto' },
+            '& > :not(style)': { m: 1, width: '40ch', ml: 'auto', mr: 'auto' },
           }}
           noValidate
           autoComplete="off"

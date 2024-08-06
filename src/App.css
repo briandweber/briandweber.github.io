@@ -39,6 +39,10 @@ body {
     width: 50vw;
   }
 
+  .mobile-nav {
+    display: none;
+  }
+
   .page-content {
     right: 0;
     width: 50vw;
@@ -176,11 +180,13 @@ ul.icons li a {
 }
 
 ul.icons li a:hover {
-  background-color: rgba(255, 255, 255, 0.075);
+  /* background-color: rgba(255, 255, 255, 0.075); */
+  background-color: #9E311F
 }
 
 ul.icons li a:active {
-  background-color: rgba(255, 255, 255, 0.175);
+  background-color: #9E311F
+  /* background-color: rgba(255, 255, 255, 0.175); */
 }
 
 .page-content {
@@ -334,8 +340,11 @@ ul.icons li a:active {
 }
 
 .giscus {
-  width: 40vw;
-  margin: auto;
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .app-container {
@@ -392,6 +401,13 @@ ul.icons li a:active {
     position: static;
   }
 
+  /* .mobile-nav {
+    font-size: 3em;
+    position: absolute;
+    right: 10%;
+    margin-bottom: 2em;
+  } */
+
   .app-container {
     position: static;
   }
@@ -432,4 +448,9 @@ ul.icons li a:active {
     padding: 0;
     height: 100%;
   }
+}
+
+.speed-dial-icon {
+  color: #242424;
+  margin-top: auto;
 }

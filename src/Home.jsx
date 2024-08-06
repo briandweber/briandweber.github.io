@@ -1,5 +1,6 @@
 import Nav from "./Nav"
 import PageContent from "./PageContent"
+import MobileNav from "./MobileNav"
 import PrimarySearchAppBar from "./SearchAppBar"
 import gamesterDesktop from './assets/images/gamesterDesktop.png';
 import gamesterAppImage from './assets/images/gamesterAppImage.png';
@@ -12,6 +13,9 @@ function Home() {
             <div className="home-wrapper">
                 <div className="primary-search-app-bar">
                     <PrimarySearchAppBar />
+                </div>
+                <div className="mobile-nav">
+                    <MobileNav />
                 </div>
                 <div className="navigation">
                     <Nav />
