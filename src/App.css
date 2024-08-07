@@ -279,7 +279,9 @@ ul.icons li a:active {
 }
 
 .card-container {
-  height: 500px;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
@@ -293,18 +295,21 @@ ul.icons li a:active {
   position: absolute;
   top: 0;
   left: 12.5%;
-  width: 75%;
-  height: 75%;
+  width: 100%;
+  height: 100%;
   opacity: 0;
-  transition: opacity 0.5s
+  object-fit: cover;
+  transition: opacity 0.5s;
 }
 
-.card-container:hover .overlay {
+.card-container:hover img {
   opacity: 0.5;
 }
 
 .card-container:hover .background-image {
   opacity: 0;
+  object-fit: cover;
+  height: 100%;
 }
 
 .overlay-tech {
