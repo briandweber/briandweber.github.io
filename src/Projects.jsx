@@ -1,4 +1,4 @@
-import gamesterDesktop from './assets/images/gamesterDesktop.png';
+import gamesterLogo from './assets/images/gamesterLogo.png';
 import gamesterAppImage from './assets/images/gamesterAppImage.png';
 import CarCarLogo from './assets/images/CarCarLogo.png';
 import CarCarAppImage from './assets/images/CarCarAppImage.png';
@@ -7,7 +7,7 @@ export default function Projects () {
     return (
         <>
             <div className="card-container">
-                    <img src={gamesterDesktop} className="background-image" alt="Gamester Logo"/>
+                    <img src={gamesterLogo} className="background-image" alt="Gamester Logo"/>
                     <img src={gamesterAppImage} className="overlay" alt="Gamester Logo" />
                     <div className='overlay-tech'>
                         <button>FastAPI</button>
