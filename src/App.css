@@ -9,7 +9,6 @@
 
 body {
   background-color: #0e1935;
-  /* overflow: hidden; */
 }
 
 #root {
@@ -32,7 +31,7 @@ body {
   display: flex;
 }
 
-@media (min-width: 1470px) {
+@media (min-width: 1024px) {
 
   .navigation {
     left: 0;
@@ -180,25 +179,21 @@ ul.icons li a {
 }
 
 ul.icons li a:hover {
-  /* background-color: rgba(255, 255, 255, 0.075); */
   background-color: #9E311F
 }
 
 ul.icons li a:active {
   background-color: #9E311F
-  /* background-color: rgba(255, 255, 255, 0.175); */
 }
 
 .page-content {
-  /* height: 100vh;
-  width: 50vw;
-  position: absolute; */
   overflow-y: auto;
   top: 100px;
 }
 
 .content-items {
   margin-right: 30%;
+  margin-bottom: 100px;
 }
 
 
@@ -279,18 +274,20 @@ ul.icons li a:active {
 }
 
 .card-container {
-  /* aspect-ratio: 1 / 1; */
-  width: 100%;
+  width: 75%;
   height: 100%;
   position: relative;
   overflow: hidden;
+  margin: auto;
+  padding-right: 70px;
 }
 
 .card-container img {
-  /* height: 75%; */
   height: auto;
-  width: 75%;
+  width: 100%;
   object-fit: contain;
+  padding: 2em;
+  border-radius: 40px;
 }
 
 .background-image {
@@ -299,15 +296,15 @@ ul.icons li a:active {
 }
 
 .overlay {
-  /* object-fit: cover; */
   position: absolute;
-  top: -5%;
-  left: 12.5%;
-  width: 100%;
+  top: 0;
+  left: 0;
+  width: 75%;
   height: auto;
   opacity: 0;
   transition: opacity 0.5s;
   aspect-ratio: 1 / 1;
+  margin: auto;
 }
 
 .overlay:hover {
@@ -315,7 +312,6 @@ ul.icons li a:active {
 }
 
 .overlay-carcar {
-  /* background-image: url("./assets/images/CarCarAppImage.png"); */
   margin: 30px;
   opacity: 0;
   object-fit: cover;
@@ -332,24 +328,9 @@ ul.icons li a:active {
   opacity: 1;
 }
 
-/* .card-container .background-image:hover {
-  opacity: 0;
-} */
-
-
-/* .background-image:hover {
-  opacity: 0;
-} */
-
-
-/* .card-container .overlay:hover {
-  opacity: 0.5;
-} */
-
 .card-container:hover .overlay-tech:hover button {
   opacity: 1;
 }
-
 
 .overlay-tech {
   position: absolute;
@@ -372,7 +353,6 @@ ul.icons li a:active {
     opacity: 1;
   }
 }
-
 
 .overlay-git button {
   border-radius: 30px;
@@ -432,7 +412,7 @@ ul.icons li a:active {
   max-width: 90px;
 }
 
-@media (max-width: 1469px) {
+@media (max-width: 1023px) {
   .git-desktop {
     display: none;
   }
@@ -457,19 +437,13 @@ ul.icons li a:active {
 
   .content-items {
     margin: auto;
+    margin-bottom: 100px;
   }
 
   .home-wrapper {
     display: block;
     position: static;
   }
-
-  /* .mobile-nav {
-    font-size: 3em;
-    position: absolute;
-    right: 10%;
-    margin-bottom: 2em;
-  } */
 
   .app-container {
     position: static;
@@ -511,6 +485,10 @@ ul.icons li a:active {
     padding: 0;
     height: 100%;
   }
+
+  .body {
+    background-color: #0E1935;
+  }
 }
 
 .speed-dial-icon {
@@ -519,9 +497,14 @@ ul.icons li a:active {
 }
 
 .footer {
-  margin-top: 30%;
+  margin-top: 20%;
 }
 
 .footer a {
   color: #6E76F6;
+}
+
+.footer h3 {
+  padding-left: 3em;
+  padding-right: 3em;
 }
