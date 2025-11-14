@@ -271,6 +271,7 @@ ul.icons li a:active {
   margin: 30px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 200px;
 }
 
 .card-container {
@@ -280,6 +281,7 @@ ul.icons li a:active {
   overflow: hidden;
   margin: auto;
   padding-right: 70px;
+  aspect-ratio: 1 / 1;
 }
 
 .card-container img {
@@ -293,6 +295,7 @@ ul.icons li a:active {
 .background-image {
   opacity: 1;
   transition: opacity 0.5s;
+  z-index: 1;
 }
 
 .overlay {
@@ -305,10 +308,30 @@ ul.icons li a:active {
   transition: opacity 0.5s;
   aspect-ratio: 1 / 1;
   margin: auto;
+  z-index: 10;
+}
+
+.overlay img {
+  padding-right: 70px;
 }
 
 .overlay:hover {
   opacity: 1;
+}
+
+.button-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.app-date {
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
 }
 
 .overlay-carcar {
